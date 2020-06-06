@@ -17,7 +17,7 @@
     display: flex;
 }
 #page-create-point header a span {
-    background-image: url('../icones/arrow-left.svg');
+    background-image: url('../assets/arrow-left.svg');
     display: flex;
     width: 20px;
     height: 25px;
@@ -43,10 +43,20 @@ form fieldset {
 
 form legend {
     margin-bottom: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
 }
 
-form h2 {
+form legend h2 {
+    color: var(--title-color);
     font-size: 24px;
+}
+
+form legend span {
+    font-size: 14px;
+    color: var(--title-color);
 }
 
 form .field {

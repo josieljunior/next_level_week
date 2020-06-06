@@ -54,9 +54,10 @@ for (const item of itemsToCollect) {
     item.addEventListener("click", handleSelectedItem)
 }
 
+const collectedItems = document.querySelector("input[name=items]")// atualizar o campo oculto
+
 let selectItems = [] //itens selecinados pelo usuario
 
-const collectedItems = document.querySelector("input[name=items]")// atualizar o campo oculto
 
 function handleSelectedItem(event) {
     // adicionar classes html
@@ -64,13 +65,15 @@ function handleSelectedItem(event) {
     itemLi.classList.toggle("selected")
     
     
-    const ItemId = event.target.dataset.id
+    const ItemId = itemLi.dataset.id
 
+    
     // verificar itens selecionados, se sim guarda-los
-    const alreadySelected = selectItems.findIndex( function(item){
+    const alreadySelected = selectItems.findIndex( item => {
         const itemFound = item == ItemId
         return itemFound
     })
+
     // se ja estiver selecionado
     if (alreadySelected >= 0 ){
         //tirar seleção

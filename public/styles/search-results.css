@@ -17,7 +17,7 @@
     display: flex;
 }
 #page-search-results header a span {
-    background-image: url('../icones/arrow-left.svg');
+    background-image: url('../assets/arrow-left.svg');
     display: flex;
     width: 20px;
     height: 25px;
@@ -177,13 +177,17 @@ main .card p {
     line-height: 26px;
     color: #6c6c80;
 }
+dody{
+    background-color: white;
+}
 body::after {
     content: "";
-    position: fixed;
-    background: white;
-    top: 260px;
+    position: absolute;
+    background: #f0f0f0;
+    top: 0px;
     right: 0;
     left: 0;
+    height: 16rem;
     bottom: 0;
     z-index: -1;
 }
